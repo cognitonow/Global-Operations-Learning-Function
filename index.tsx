@@ -33,14 +33,24 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Nav Link Active State Observer ---
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-link');
+    const progressDots = document.querySelectorAll('.progress-dot');
 
     const navObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
+                const activeId = entry.target.id;
+                
                 navLinks.forEach(link => {
                     link.classList.remove('active');
-                    if (link.getAttribute('href') === `#${entry.target.id}`) {
+                    if (link.getAttribute('href') === `#${activeId}`) {
                         link.classList.add('active');
+                    }
+                });
+
+                progressDots.forEach(dot => {
+                    dot.classList.remove('active');
+                    if (dot.getAttribute('href') === `#${activeId}`) {
+                        dot.classList.add('active');
                     }
                 });
             }
@@ -52,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
     sections.forEach(section => navObserver.observe(section));
 
     // --- Smooth Scroll for ALL Navigation Links ---
-    const scrollButtons = document.querySelectorAll('.scroll-btn, header .nav-link');
+    const scrollButtons = document.querySelectorAll('.scroll-btn, header .nav-link, .progress-dot');
 
     scrollButtons.forEach(button => {
         button.addEventListener('click', (event) => {

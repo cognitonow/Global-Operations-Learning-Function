@@ -41,6 +41,27 @@
         .nav-link.active {
             font-weight: 600;
         }
+
+        /* Progress Dots */
+        .progress-dot {
+            display: block;
+            position: relative;
+            width: 8px;
+            height: 8px;
+            border-radius: 9999px;
+            background-color: #CBD5E1; /* slate-300 */
+            transition: all 0.2s ease-in-out;
+        }
+
+        .progress-dot:hover {
+            transform: scale(1.5);
+            background-color: #94A3B8; /* slate-400 */
+        }
+
+        .progress-dot.active {
+            background-color: #00A0D5; /* primark-aqua */
+            transform: scale(2);
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -55,9 +76,9 @@
                     <a href="#evaluation" class="nav-link text-gray-500 font-medium">Evaluation</a>
                     <a href="#audience" class="nav-link text-gray-500 font-medium">Audience</a>
                     <a href="#design" class="nav-link text-gray-500 font-medium">Design</a>
-                    <a href="#formats" class="nav-link text-gray-500 font-medium">Formats</a>
+                    <a href="#formats" class="nav-link text-gray-500 font-medium">Formats & Methods</a>
                     <a href="#engagement" class="nav-link text-gray-500 font-medium">Engagement</a>
-                    <a href="#stakeholders" class="nav-link text-gray-500 font-medium">Stakeholders</a>
+                    <a href="#stakeholders" class="nav-link text-gray-500 font-medium">Stakeholder Engagement</a>
                     <a href="#scaling" class="nav-link text-gray-500 font-medium">Scaling</a>
                 </nav>
             </div>
@@ -135,7 +156,7 @@
                 </div>
             </div>
             <div class="flex-1 bg-white flex flex-col items-center justify-center relative">
-                <div class="max-w-5xl w-full px-4 sm:px-6 lg:px-8 py-12">
+                <div class="max-w-5xl w-full px-4 sm:px-6 lg:px-8 pt-12 pb-32">
                     <h3 class="text-center text-2xl font-bold tracking-tight text-gray-900">Connecting Learning to Business Value</h3>
                     <blockquote class="mt-6 border-l-4 border-primark-strawberry pl-6 max-w-3xl mx-auto">
                         <p class="text-lg italic text-gray-700">There must be a clear flow from strategic goals to learning programs. We start with the business challenge, not the learning solution.</p>
@@ -177,16 +198,18 @@
                 </div>
             </div>
             <div class="flex-1 bg-white flex flex-col items-center justify-center relative">
-                <div class="max-w-5xl w-full px-4 sm:px-6 lg:px-8 py-12">
+                <div class="max-w-5xl w-full px-4 sm:px-6 lg:px-8 pt-12 pb-32">
                     <div class="max-w-3xl mx-auto">
-                        <h3 class="text-2xl font-bold tracking-tight text-gray-900">From Learning Metrics to Business Results</h3>
-                        <blockquote class="mt-6 border-l-4 border-primark-strawberry pl-6">
-                            <p class="text-lg italic text-gray-700">We're talking better Customer Satisfaction Scores, more sales, or reduced process time—actual, tangible results. The days of relying only on "learning metrics" are over.</p>
+                        <h3 class="text-2xl font-bold tracking-tight text-gray-900">Business Results are our Learning Metrics</h3>
+                        <blockquote class="mt-6 border-l-4 border-primark-strawberry pl-6 mb-10">
+                            <p class="text-lg italic text-gray-700">
+                                After three retrenchments in L&D, the days of relying on "learning metrics" like course satisfaction are over. The business can't and won't rely on theory; it needs tangible results. It is imperative that we L&D practitioners take accountability. The only metrics that matter are those that shift business performance, such as improved customer satisfaction, increased sales, or reduced process times—delivering actual, measurable results.
+                            </p>
                         </blockquote>
                         <ul class="mt-8 space-y-4 text-gray-600">
                             <li class="flex items-start"><span class="h-6 w-6 flex-shrink-0 bg-primark-aqua text-white text-sm font-bold rounded-full flex items-center justify-center mr-3 mt-1">✓</span><span><strong class="text-gray-800">Define Business KPIs First:</strong> Partner with stakeholders to identify the core business metric we intend to move.</span></li>
-                            <li class="flex items-start"><span class="h-6 w-6 flex-shrink-0 bg-primark-aqua text-white text-sm font-bold rounded-full flex items-center justify-center mr-3 mt-1">✓</span><span><strong class="text-gray-800">Establish Control Groups:</strong> Where possible, use control groups to isolate the impact of the learning intervention.</span></li>
-                            <li class="flex items-start"><span class="h-6 w-6 flex-shrink-0 bg-primark-aqua text-white text-sm font-bold rounded-full flex items-center justify-center mr-3 mt-1">✓</span><span><strong class="text-gray-800">Correlate Learning to Performance:</strong> Analyze performance data pre- and post-training to measure tangible impact and ROI.</span></li>
+                            <li class="flex items-start"><span class="h-6 w-6 flex-shrink-0 bg-primark-aqua text-white text-sm font-bold rounded-full flex items-center justify-center mr-3 mt-1">✓</span><span><strong class="text-gray-800">Connect Performance to Learning:</strong> We need to instill a culture of learning and reward those that seek out to improve.</span></li>
+                            <li class="flex items-start"><span class="h-6 w-6 flex-shrink-0 bg-primark-aqua text-white text-sm font-bold rounded-full flex items-center justify-center mr-3 mt-1">✓</span><span><strong class="text-gray-800">Intentional Learning Design:</strong> Create to enable impact.</span></li>
                         </ul>
                     </div>
                 </div>
@@ -221,25 +244,58 @@
                 </div>
             </div>
             <div class="flex-1 bg-white flex flex-col items-center justify-center relative">
-                <div class="max-w-5xl w-full px-4 sm:px-6 lg:px-8 py-12">
-                    <h3 class="text-center text-2xl font-bold tracking-tight text-gray-900">A Holistic Learning Ecosystem</h3>
-                    <blockquote class="mt-6 border-l-4 border-primark-strawberry pl-6 max-w-3xl mx-auto">
-                        <p class="text-lg italic text-gray-700">A change on the shop floor can only be sustained if it is understood, reinforced, and supported by leadership and central teams.</p>
-                    </blockquote>
-                    <ul class="mt-8 grid md:grid-cols-3 gap-8 text-center max-w-3xl mx-auto">
-                        <li>
-                            <h4 class="font-bold text-lg text-gray-800">Train the Trainers</h4>
-                            <p class="text-gray-600 mt-1">Equip <strong class="text-primark-aqua">Store Leadership</strong> with coaching skills to make learning "stick."</p>
-                        </li>
-                        <li>
-                            <h4 class="font-bold text-lg text-gray-800">Direct Intervention</h4>
-                            <p class="text-gray-600 mt-1">Provide <strong class="text-primark-aqua">Retail Colleagues</strong> with practical, immediately applicable skills.</p>
-                        </li>
-                        <li>
-                            <h4 class="font-bold text-lg text-gray-800">High-Level Awareness</h4>
-                            <p class="text-gray-600 mt-1">Enable <strong class="text-primark-aqua">Central Functions</strong> to provide aligned support and processes.</p>
-                        </li>
-                    </ul>
+                <div class="max-w-5xl w-full px-4 sm:px-6 lg:px-8 pt-12 pb-32">
+                    <div class="max-w-3xl mx-auto">
+                        <h3 class="text-2xl font-bold tracking-tight text-gray-900">Guiding Philosophy</h3>
+                        <blockquote class="mt-6 border-l-4 border-primark-strawberry pl-6">
+                            <p class="text-lg italic text-gray-700">To be impactful at a global scale, training must be intentionally interconnected. A change in behaviour on the shop floor can only be sustained if it is understood, reinforced, and supported by leadership and central teams. This is a manufactured outcome, as it is part of the set objectives for the initiative.</p>
+                            <p class="mt-4 text-lg italic text-gray-700">An 8-month development cycle for 20 people? As a global operations function, we no longer have the luxury of creating training that doesn't reach a global audience and isn't interconnected and impactful at all levels. This means the training must be intentionally designed to support and enable this interconnectedness.</p>
+                        </blockquote>
+                        
+                        <h4 class="mt-10 text-center text-xl font-bold text-gray-800 tracking-tight">Our Audience Tiers</h4>
+                        
+                        <ul class="mt-8 space-y-8 text-gray-600">
+                            <!-- Train the Trainers -->
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-primark-aqua/10 text-primark-aqua flex items-center justify-center mr-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M15 21v-1a6 6 0 00-1-3.72a4 4 0 00-4 0A6 6 0 003 20v1h12z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h5 class="font-bold text-lg text-gray-900">Train the Trainers</h5>
+                                    <p class="mt-1"><strong class="font-semibold text-gray-800">Who:</strong> Store Leadership (Team Leads, Store Managers) who will be equipped to deliver the training.</p>
+                                    <p class="mt-2"><strong class="font-semibold text-gray-800">Learning Needs:</strong> They need to master the core content, but more importantly, they need to be equipped with the facilitation and coaching skills to effectively train their teams, reinforce the desired behaviours, and make the learning "stick."</p>
+                                </div>
+                            </li>
+                            <!-- Direct Intervention -->
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-primark-aqua/10 text-primark-aqua flex items-center justify-center mr-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                       <path stroke-linecap="round" stroke-linejoin="round" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h5 class="font-bold text-lg text-gray-900">Direct Intervention</h5>
+                                    <p class="mt-1"><strong class="font-semibold text-gray-800">Who:</strong> The customer-facing retail colleagues on the shop floor.</p>
+                                    <p class="mt-2"><strong class="font-semibold text-gray-800">Learning Needs:</strong> Practical, simple, and immediately applicable skills that help them perform their jobs more effectively and confidently. Training must be concise, fit into the flow of their work, and directly address the real-world challenges they face.</p>
+                                </div>
+                            </li>
+                            <!-- Awareness -->
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-primark-aqua/10 text-primark-aqua flex items-center justify-center mr-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                       <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h5 class="font-bold text-lg text-gray-900">Awareness</h5>
+                                    <p class="mt-1"><strong class="font-semibold text-gray-800">Who:</strong> Central Functions (e.g., Operations, HR, Merchandising) that support the retail network.</p>
+                                    <p class="mt-2"><strong class="font-semibold text-gray-800">Learning Needs:</strong> They don't need the "how-to" training, but they need high-level awareness of the initiatives being rolled out in stores. This ensures they can provide the right support, align their own processes, and understand how their decisions impact the in-store experience.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="absolute bottom-16 flex space-x-4">
                     <a href="#evaluation" class="scroll-btn w-12 h-12 rounded-full bg-gray-800/10 hover:bg-gray-800/20 backdrop-blur-sm flex items-center justify-center text-gray-600 transition-colors duration-300">
@@ -272,7 +328,7 @@
                 </div>
             </div>
             <div class="flex-1 bg-white flex flex-col items-center justify-center relative">
-                <div class="max-w-5xl w-full px-4 sm:px-6 lg:px-8 py-12">
+                <div class="max-w-5xl w-full px-4 sm:px-6 lg:px-8 pt-12 pb-32">
                     <h3 class="text-center text-2xl font-bold tracking-tight text-gray-900">From MVP to Scaled Solution</h3>
                     <blockquote class="mt-6 border-l-4 border-primark-strawberry pl-6 max-w-3xl mx-auto">
                         <p class="text-lg italic text-gray-700">We don't spend months building the "perfect" solution. We launch a Minimum Viable Product (MVP), gather real-world data, and iterate quickly.</p>
@@ -298,41 +354,77 @@
             </div>
         </section>
 
-        <!-- Section 5: Blended Formats -->
+        <!-- Section 5: Formats and Methods -->
         <section id="formats" class="min-h-screen flex flex-col scroll-mt-20 anim-fade-in">
             <div class="flex-1 bg-primark-aqua flex items-center justify-center text-white">
                 <div class="max-w-5xl w-full px-4 sm:px-6 lg:px-8">
                     <div class="flex flex-col md:flex-row items-center justify-center text-center md:text-left">
                         <div class="flex-shrink-0 md:text-right">
-                            <h2 class="text-sm font-bold tracking-widest text-primark-blueberry-light uppercase">5. Blended Formats</h2>
+                            <h2 class="text-sm font-bold tracking-widest text-primark-blueberry-light uppercase">5. Formats & Methods</h2>
                         </div>
                         <div class="bg-white/30 w-16 h-px md:w-px md:h-20 my-6 md:my-0 md:mx-8"></div>
                         <div class="max-w-xl">
-                            <p class="text-3xl md:text-4xl font-extrabold tracking-tight">Learning isn't one-size-fits-all. The format must match the need.</p>
+                            <p class="text-3xl md:text-4xl font-extrabold tracking-tight">The question isn't what format we use, but what's the fastest path to the business result.</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="flex-1 bg-white flex flex-col items-center justify-center relative">
-                <div class="max-w-5xl w-full px-4 sm:px-6 lg:px-8 py-12">
-                    <h3 class="text-center text-2xl font-bold tracking-tight text-gray-900">The Right Tool for the Right Job</h3>
-                    <blockquote class="mt-6 border-l-4 border-primark-strawberry pl-6 max-w-3xl mx-auto">
-                        <p class="text-lg italic text-gray-700">Our colleagues are busy. Learning needs to be accessible, relevant, and integrated into their workflow, not a disruption to it.</p>
-                    </blockquote>
-                    <ul class="mt-8 grid md:grid-cols-3 gap-8 text-center max-w-3xl mx-auto">
-                        <li>
-                            <h4 class="font-bold text-lg text-gray-800">Virtual Instructor-Led</h4>
-                            <p class="text-gray-600 mt-1">For collaborative, skill-based workshops where discussion and practice are key.</p>
-                        </li>
-                        <li>
-                            <h4 class="font-bold text-lg text-gray-800">Self-Paced eLearning</h4>
-                            <p class="text-gray-600 mt-1">For foundational knowledge that needs to be delivered consistently and at scale.</p>
-                        </li>
-                        <li>
-                            <h4 class="font-bold text-lg text-gray-800">Performance Support</h4>
-                            <p class="text-gray-600 mt-1">Job aids and checklists for on-the-floor, just-in-time support at the moment of need.</p>
-                        </li>
-                    </ul>
+                <div class="max-w-5xl w-full px-4 sm:px-6 lg:px-8 pt-12 pb-32">
+                     <div class="max-w-3xl mx-auto">
+                        <h3 class="text-2xl font-bold tracking-tight text-gray-900">Guiding Principle</h3>
+                        <blockquote class="mt-6 border-l-4 border-primark-strawberry pl-6">
+                            <p class="text-lg italic text-gray-700">The question is not whether we make an eLearning module or a video. The question is: what is the fastest, most effective way to achieve the desired business result? If a concept can be taught in a 30-second TikTok, that's what we'll use. Our methods must be simple, scalable, and designed for a fast-paced retail environment, minimizing disruption while maximizing impact.</p>
+                        </blockquote>
+                        <h4 class="mt-10 text-center text-xl font-bold text-gray-800 tracking-tight">Our Approach Will Be:</h4>
+                        <ul class="mt-8 space-y-6 text-gray-600">
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primark-aqua/10 text-primark-aqua flex items-center justify-center mr-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                                </div>
+                                <div>
+                                    <h5 class="font-bold text-gray-900">Just-in-Time</h5>
+                                    <p>Learning should be available at the moment of need, moving away from scheduled courses and towards on-demand resources.</p>
+                                </div>
+                            </li>
+                             <li class="flex items-start">
+                                <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primark-aqua/10 text-primark-aqua flex items-center justify-center mr-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
+                                </div>
+                                <div>
+                                    <h5 class="font-bold text-gray-900">Multi-Modal</h5>
+                                    <p>Using a mix of formats (video, text, audio, interactive) to cater to different learning preferences.</p>
+                                </div>
+                            </li>
+                             <li class="flex items-start">
+                                <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primark-aqua/10 text-primark-aqua flex items-center justify-center mr-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9A9 9 0 013 12m0 0a9 9 0 019-9m-9 9h18" /></svg>
+                                </div>
+                                <div>
+                                    <h5 class="font-bold text-gray-900">Multi-Language</h5>
+                                    <p>All content will be created for global scalability, ensuring it can be easily translated and localized.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primark-aqua/10 text-primark-aqua flex items-center justify-center mr-4">
+                                   <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h5V4H4zm0 9h5v5H4v-5zm9-9h5v5h-5V4zm0 9h5v5h-5v-5z" /></svg>
+                                </div>
+                                <div>
+                                    <h5 class="font-bold text-gray-900">Usable & Reusable</h5>
+                                    <p>Information locked in a one-off eLearning course is not effective. We will create shareable, reusable knowledge assets.</p>
+                                </div>
+                            </li>
+                             <li class="flex items-start">
+                                <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primark-aqua/10 text-primark-aqua flex items-center justify-center mr-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8.684 13.342C8.886 12.938 9 12.482 9 12s-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.368a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z" /></svg>
+                                </div>
+                                <div>
+                                    <h5 class="font-bold text-gray-900">Social & Transformable</h5>
+                                    <p>Our formats will encourage peer-to-peer sharing and allow information to be transformed and adapted for different contexts.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="absolute bottom-16 flex space-x-4">
                     <a href="#design" class="scroll-btn w-12 h-12 rounded-full bg-gray-800/10 hover:bg-gray-800/20 backdrop-blur-sm flex items-center justify-center text-gray-600 transition-colors duration-300">
@@ -365,11 +457,11 @@
                 </div>
             </div>
             <div class="flex-1 bg-white flex flex-col items-center justify-center relative">
-                <div class="max-w-5xl w-full px-4 sm:px-6 lg:px-8 py-12">
+                <div class="max-w-5xl w-full px-4 sm:px-6 lg:px-8 pt-12 pb-32">
                      <div class="max-w-3xl mx-auto">
                         <h3 class="text-2xl font-bold tracking-tight text-gray-900">Creating a Pull for Learning</h3>
                         <blockquote class="mt-6 border-l-4 border-primark-strawberry pl-6">
-                            <p class="text-lg italic text-gray-700">We move beyond "mandatory training." Our goal is to create a compelling narrative that shows learners "what's in it for them" and how it connects to their success.</p>
+                            <p class="text-lg italic text-gray-700">Let's be honest—people don't care about training unless it directly benefits them and their careers. To be engaging, our initiatives must clearly and compellingly answer the "What's in it for me?.</p>
                         </blockquote>
                         <ul class="mt-8 space-y-4 text-gray-600">
                             <li class="flex items-start"><span class="h-6 w-6 flex-shrink-0 bg-primark-aqua text-white text-sm font-bold rounded-full flex items-center justify-center mr-3 mt-1">✓</span><span><strong class="text-gray-800">Leadership Buy-in:</strong> Engage leaders to champion the initiative and reinforce its importance.</span></li>
@@ -393,33 +485,66 @@
             </div>
         </section>
 
-        <!-- Section 7: Stakeholder Management -->
+        <!-- Section 7: Stakeholder Engagement -->
         <section id="stakeholders" class="min-h-screen flex flex-col scroll-mt-20 anim-fade-in">
             <div class="flex-1 bg-primark-aqua flex items-center justify-center text-white">
                 <div class="max-w-5xl w-full px-4 sm:px-6 lg:px-8">
                     <div class="flex flex-col md:flex-row items-center justify-center text-center md:text-left">
                         <div class="flex-shrink-0 md:text-right">
-                            <h2 class="text-sm font-bold tracking-widest text-primark-blueberry-light uppercase">7. Stakeholder Mgt.</h2>
+                            <h2 class="text-sm font-bold tracking-widest text-primark-blueberry-light uppercase">7. Stakeholder Engagement</h2>
                         </div>
                         <div class="bg-white/30 w-16 h-px md:w-px md:h-20 my-6 md:my-0 md:mx-8"></div>
                         <div class="max-w-xl">
-                            <p class="text-3xl md:text-4xl font-extrabold tracking-tight">Learning is a collaborative sport. Success requires deep partnership across the business.</p>
+                            <p class="text-3xl md:text-4xl font-extrabold tracking-tight">We move from "getting buy-in" to a model of instant, collaborative knowledge generation.</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="flex-1 bg-white flex flex-col items-center justify-center relative">
-                <div class="max-w-5xl w-full px-4 sm:px-6 lg:px-8 py-12">
+                <div class="max-w-5xl w-full px-4 sm:px-6 lg:px-8 pt-12 pb-32">
                      <div class="max-w-3xl mx-auto">
-                        <h3 class="text-2xl font-bold tracking-tight text-gray-900">Building a Coalition of Champions</h3>
+                        <h3 class="text-2xl font-bold tracking-tight text-gray-900">Guiding Philosophy: Real-Time Partnership</h3>
                         <blockquote class="mt-6 border-l-4 border-primark-strawberry pl-6">
-                            <p class="text-lg italic text-gray-700">We are not an order-taker function. We are strategic partners, co-creating solutions with business leaders to solve their most pressing challenges.</p>
+                            <p class="text-lg italic text-gray-700">The traditional method of getting sign-off is antiquated and too slow. We must move from "getting buy-in" to a model where knowledge is generated instantly and collaboratively. This means building active partnerships with stakeholders and creating feedback loops that allow us to listen, co-create, and adapt in real-time.</p>
                         </blockquote>
-                        <ul class="mt-8 space-y-4 text-gray-600">
-                            <li class="flex items-start"><span class="h-6 w-6 flex-shrink-0 bg-primark-aqua text-white text-xs font-bold rounded-full flex items-center justify-center mr-3 mt-1">1</span><span><strong class="text-gray-800">Identify & Map:</strong> Map out all key stakeholders, from executive sponsors to end-users and adjacent teams.</span></li>
-                            <li class="flex items-start"><span class="h-6 w-6 flex-shrink-0 bg-primark-aqua text-white text-xs font-bold rounded-full flex items-center justify-center mr-3 mt-1">2</span><span><strong class="text-gray-800">Align & Communicate:</strong> Establish a regular cadence of communication to ensure alignment on goals, progress, and risks.</span></li>
-                            <li class="flex items-start"><span class="h-6 w-6 flex-shrink-0 bg-primark-aqua text-white text-xs font-bold rounded-full flex items-center justify-center mr-3 mt-1">3</span><span><strong class="text-gray-800">Empower & Equip:</strong> Provide stakeholders with the data and insights they need to make informed decisions and advocate for the program.</span></li>
-                        </ul>
+                        
+                        <h4 class="mt-10 text-xl font-bold text-gray-800 tracking-tight">Live Example: Real-Time Engagement Loop</h4>
+                        <p class="mt-2 text-gray-600">Let's use an extreme but powerful case. Imagine a security incident occurs in one of our stores.</p>
+
+                        <div class="mt-8 space-y-6">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primark-aqua/10 text-primark-aqua flex items-center justify-center mr-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
+                                </div>
+                                <div>
+                                    <h5 class="font-bold text-gray-900">Immediate Feedback</h5>
+                                    <p class="text-gray-600">Colleagues start posting on internal channels about how they feel—scared, angry, and confused. These are instant, real-time data on employee sentiment and data to show an immediate need for intervention.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primark-aqua/10 text-primark-aqua flex items-center justify-center mr-4">
+                                   <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                                </div>
+                                <div>
+                                    <h5 class="font-bold text-gray-900">Global Ops Response</h5>
+                                    <p class="text-gray-600">Instead of a delayed, formal communication, Global Ops responds immediately. They issue a mandate to Team Leads to check in with their teams.</p>
+                                </div>
+                            </div>
+                             <div class="flex items-start">
+                                <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primark-aqua/10 text-primark-aqua flex items-center justify-center mr-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.293 2.293a1 1 0 010 1.414L10 17l-4 4-4-4 5.293-5.293a1 1 0 011.414 0L10 13zm-3 8l-4-4 4-4" /></svg>
+                                </div>
+                                <div>
+                                    <h5 class="font-bold text-gray-900">Leadership in Action</h5>
+                                    <p class="text-gray-600">Senior leaders start publicly praising the great leadership shown by retail staff on the ground. They highlight immediate, positive actions being taken.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 bg-gray-50 p-6 rounded-lg border border-gray-200">
+                            <h5 class="font-bold text-gray-900">What this demonstrates:</h5>
+                            <p class="mt-2 text-gray-700">This real-time loop shows that we are listening and reacting instantly. It builds trust and shows that central functions are connected to the reality of the stores. This is the level of engagement we should aim for with our learning initiatives—a constant, responsive dialogue, not a one-way broadcast.</p>
+                        </div>
                     </div>
                 </div>
                 <div class="absolute bottom-16 flex space-x-4">
@@ -437,32 +562,66 @@
             </div>
         </section>
 
-         <!-- Section 8: Scaling Globally -->
+        <!-- Section 8: Scaling -->
         <section id="scaling" class="min-h-screen flex flex-col scroll-mt-20 anim-fade-in">
             <div class="flex-1 bg-primark-aqua flex items-center justify-center text-white">
                 <div class="max-w-5xl w-full px-4 sm:px-6 lg:px-8">
                     <div class="flex flex-col md:flex-row items-center justify-center text-center md:text-left">
                         <div class="flex-shrink-0 md:text-right">
-                            <h2 class="text-sm font-bold tracking-widest text-primark-blueberry-light uppercase">8. Scaling Globally</h2>
+                            <h2 class="text-sm font-bold tracking-widest text-primark-blueberry-light uppercase">8. Scaling</h2>
                         </div>
                         <div class="bg-white/30 w-16 h-px md:w-px md:h-20 my-6 md:my-0 md:mx-8"></div>
                         <div class="max-w-xl">
-                            <p class="text-3xl md:text-4xl font-extrabold tracking-tight">Solutions must be designed for global scale from day one.</p>
+                            <p class="text-3xl md:text-4xl font-extrabold tracking-tight">All programs are designed to scale globally from day one.</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="flex-1 bg-white flex flex-col items-center justify-center relative">
-                <div class="max-w-5xl w-full px-4 sm:px-6 lg:px-8 py-12">
+                <div class="max-w-5xl w-full px-4 sm:px-6 lg:px-8 pt-12 pb-32">
                      <div class="max-w-3xl mx-auto">
-                        <h3 class="text-2xl font-bold tracking-tight text-gray-900">Think Global, Act Local</h3>
+                        <h3 class="text-2xl font-bold tracking-tight text-gray-900">Guiding Philosophy</h3>
                         <blockquote class="mt-6 border-l-4 border-primark-strawberry pl-6">
-                            <p class="text-lg italic text-gray-700">A solution that only works in one market isn't a solution. We build a global core and create frameworks for local adaptation, ensuring consistency and relevance.</p>
+                            <p class="text-lg italic text-gray-700">All programs are designed to scale globally from day one. As Global Ops, we handle global challenges. More bespoke, personalized training initiatives should be handled by internal and local teams, not by our function.</p>
                         </blockquote>
-                        <ul class="mt-8 space-y-4 text-gray-600">
-                            <li class="flex items-start"><span class="h-6 w-6 flex-shrink-0 bg-primark-aqua text-white text-sm font-bold rounded-full flex items-center justify-center mr-3 mt-1">✓</span><span><strong class="text-gray-800">Modular Design:</strong> Create content in modular blocks that can be easily translated and contextualized for local markets.</span></li>
-                            <li class="flex items-start"><span class="h-6 w-6 flex-shrink-0 bg-primark-aqua text-white text-sm font-bold rounded-full flex items-center justify-center mr-3 mt-1">✓</span><span><strong class="text-gray-800">Centralized Platform:</strong> Leverage a single Learning Management System (LMS) for consistent delivery, tracking, and reporting.</span></li>
-                            <li class="flex items-start"><span class="h-6 w-6 flex-shrink-0 bg-primark-aqua text-white text-sm font-bold rounded-full flex items-center justify-center mr-3 mt-1">✓</span><span><strong class="text-gray-800">Community of Practice:</strong> Foster a global network of trainers and champions to share best practices and drive local adoption.</span></li>
+                        <h4 class="mt-10 text-center text-xl font-bold text-gray-800 tracking-tight">To achieve this, we will:</h4>
+                        <ul class="mt-8 space-y-6 text-gray-600">
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primark-aqua/10 text-primark-aqua flex items-center justify-center mr-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" /></svg>
+                                </div>
+                                <div>
+                                    <h5 class="font-bold text-gray-900">Create a Global Product with a Localization Kit</h5>
+                                    <p>Design a single, high-quality "80%" solution that is universally applicable, and provide regional teams with a simple toolkit to adapt the remaining "20%" for local context.</p>
+                                </div>
+                            </li>
+                             <li class="flex items-start">
+                                <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primark-aqua/10 text-primark-aqua flex items-center justify-center mr-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M15 21v-1a6 6 0 00-1-3.72a4 4 0 00-4 0A6 6 0 003 20v1h12z" /></svg>
+                                </div>
+                                <div>
+                                    <h5 class="font-bold text-gray-900">Utilize a Train-the-Trainer Model</h5>
+                                    <p>Empower local leaders to be the delivery agents. This is the most efficient and effective way to scale facilitation and ensure local relevance.</p>
+                                </div>
+                            </li>
+                             <li class="flex items-start">
+                                <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primark-aqua/10 text-primark-aqua flex items-center justify-center mr-4">
+                                   <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                                </div>
+                                <div>
+                                    <h5 class="font-bold text-gray-900">Leverage Technology</h5>
+                                    <p>Leverage a centralized platform to distribute the core product and localization kits, streamlining workflows and enhancing access for all markets, moving beyond a traditional LMS-only model.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primark-aqua/10 text-primark-aqua flex items-center justify-center mr-4">
+                                   <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+                                </div>
+                                <div>
+                                    <h5 class="font-bold text-gray-900">Foster Cross-Functional Partnerships</h5>
+                                    <p>Our initiatives will not operate in isolation. We will work closely with Leadership, Department Leads, Marketing, and other key functions to ensure alignment, gather support, and guarantee a successful global rollout.</p>
+                                </div>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -482,6 +641,38 @@
         </section>
 
     </main>
+
+    <!-- Progress Indicator -->
+    <nav id="progress-nav" class="fixed right-6 top-1/2 -translate-y-1/2 z-40 hidden md:flex flex-col items-center space-y-4 bg-white/60 backdrop-blur-md p-3 rounded-full border border-gray-200/80 shadow-lg">
+        <a href="#pitch" class="progress-dot group" aria-label="Introduction">
+            <span class="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-gray-800 text-white text-xs font-bold px-2 py-1 rounded-md opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">Introduction</span>
+        </a>
+        <a href="#problem-outcome" class="progress-dot group" aria-label="Problem">
+             <span class="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-gray-800 text-white text-xs font-bold px-2 py-1 rounded-md opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">Problem</span>
+        </a>
+        <a href="#evaluation" class="progress-dot group" aria-label="Evaluation">
+             <span class="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-gray-800 text-white text-xs font-bold px-2 py-1 rounded-md opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">Evaluation</span>
+        </a>
+        <a href="#audience" class="progress-dot group" aria-label="Audience">
+             <span class="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-gray-800 text-white text-xs font-bold px-2 py-1 rounded-md opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">Audience</span>
+        </a>
+        <a href="#design" class="progress-dot group" aria-label="Design">
+             <span class="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-gray-800 text-white text-xs font-bold px-2 py-1 rounded-md opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">Design</span>
+        </a>
+        <a href="#formats" class="progress-dot group" aria-label="Formats & Methods">
+             <span class="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-gray-800 text-white text-xs font-bold px-2 py-1 rounded-md opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">Formats & Methods</span>
+        </a>
+        <a href="#engagement" class="progress-dot group" aria-label="Engagement">
+             <span class="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-gray-800 text-white text-xs font-bold px-2 py-1 rounded-md opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">Engagement</span>
+        </a>
+        <a href="#stakeholders" class="progress-dot group" aria-label="Stakeholder Engagement">
+             <span class="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-gray-800 text-white text-xs font-bold px-2 py-1 rounded-md opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">Stakeholder Engagement</span>
+        </a>
+        <a href="#scaling" class="progress-dot group" aria-label="Scaling">
+             <span class="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-gray-800 text-white text-xs font-bold px-2 py-1 rounded-md opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">Scaling</span>
+        </a>
+    </nav>
+
     <footer class="bg-gray-100 border-t border-gray-200">
         <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-500">
             <p>&copy; 2024 Kai-Jen Tsai. All Rights Reserved.</p>
